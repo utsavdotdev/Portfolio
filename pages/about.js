@@ -1,12 +1,12 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Head from 'next/head'
 
-export default function Home() {
+export default function about() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Utsav Bhattarai</title>
-        <meta name="description" />
+        <meta name="description"  />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -16,7 +16,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Home-page
+         About-page
         </p>
       </main>
        

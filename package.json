@@ -1,5 +1,5 @@
 {
-  "name": "h3llo",
+  "name": "mywebsite",
   "private": true,
   "scripts": {
     "dev": "next dev",

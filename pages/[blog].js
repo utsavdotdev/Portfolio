@@ -1,7 +1,9 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-
-export default function Home() {
+import Head from 'next/head'
+import {useRouter} from 'next/router'
+export default function contact() {
+    const router = useRouter();
+    const blog = router.query.blog;
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +18,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Home-page
+         {blog}-page
         </p>
       </main>
        
