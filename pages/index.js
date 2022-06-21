@@ -7,7 +7,7 @@ export default function Home() {
         <meta name="description" />
         <link rel="icon" href="/favicon.ico"/>
       </Head>
-      <div>Work in Progress🔥</div>
+      {/* <div>Work in Progress🔥</div> */}
     </>
   )
-}
+} 
