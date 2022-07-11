@@ -15,7 +15,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
 
 import Link from "next/link";
-import Img from "../public/assets/pic.png";
+import Img from "../assets/pic.png";
 import NavLink from "./NavLink";
 
 const links = [

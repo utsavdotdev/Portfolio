@@ -13,7 +13,7 @@ const social = {
     name: "El Midaoui Ziad",
     accounts: [
       {
-        url: "https://www.linkedin.com/in/el-midaoui-ziad/",
+        url: "",
         name: "LinkedIn",
         type: "linkedin",
         icon: <FaLinkedin />,
