@@ -10,7 +10,7 @@ import { FiMail } from "react-icons/fi";
 const social = {
   copyright: `Copyright © ${new Date().getFullYear()} Utsav Bhattarai. All Rights Reserved.`,
   author: {
-    name: "El Midaoui Ziad",
+    name: "Utsav Bhattarai",
     accounts: [
       {
         url: "",
