@@ -69,12 +69,9 @@ export default function Home() {
               <br />
               <br />I code <Code colorScheme="blue"> beautifully</Code>{" "}
               <Code colorScheme="green"> simple</Code> things and I{" "}
-              <Code colorScheme="red"> love </Code> what I do It's being
+              <Code colorScheme="red"> love </Code> what I do but It's being
               frustrating sometimes but result's{" "}
-              <Code colorScheme="purple">adrenaline</Code> hits different😘
-              <br />
-              When I'm not coding I'm still on my computer{" "}
-              <Code colorScheme={"orange"}>gaming 🎮</Code>
+              <Code colorScheme="purple">adrenaline</Code> hits different😘.
             </Text>
           </Box>
           <Box
