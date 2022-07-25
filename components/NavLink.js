@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 function NavLink({ to, name, onClose, ...rest }) {
   const location = useRouter();
   const isActive = location.pathname === to;
-  const blogUrl = "https://utsavbhattarai.hashnode.dev/";
+  const blogUrl = "https://blog.utsavbhattarai.info.np/";
 
   return (
     <Link href={name == "Blog" ? blogUrl : to} passHref>

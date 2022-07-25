@@ -2,20 +2,19 @@ import {
   Box,
   Flex,
   IconButton,
-  Text,
   useColorMode,
   useColorModeValue,
   useDisclosure,
   HStack,
   Avatar,
-  Link as ChakraLink
+  Link as ChakraLink,
+  Stack
 } from "@chakra-ui/react";
-import { CloseIcon } from "@chakra-ui/icon";
 import { GiHamburgerMenu } from "react-icons/gi";
+import {BiX} from "react-icons/bi"
 import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
 
 import Link from "next/link";
-import Img from "../assets/pic.png";
 import NavLink from "./NavLink";
 
 const links = [
@@ -43,7 +42,7 @@ function Navbar() {
       >
         <IconButton
           sixe={"md"}
-          icon={isOpen ? <CloseIcon /> : <GiHamburgerMenu />}
+          icon={isOpen ? <BiX size={24}/> : <GiHamburgerMenu />}
           aria-label={"Open Menu"}
           display={["inherit", "inherit", "none"]}
           onClick={isOpen ? onClose : onOpen}
@@ -51,7 +50,7 @@ function Navbar() {
         <HStack spacing={4} alignItems={"center"}>
           <Link href="/">
             <Box mr={5} display={["none", "none", "block"]}>
-              <Avatar size={"sm"} src={Img} />
+              <Avatar size={"sm"} src="/pic.png" />
             </Box>
           </Link>
           <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
@@ -86,6 +85,26 @@ function Navbar() {
           />
         </HStack>
       </Flex>
+      {isOpen ? (
+        <Box
+          pb={4}
+          w={["100%", "100%", "80%"]}
+          maxW={800}
+          display={["inherit", "inherit", "none"]}
+        >
+          <Stack as={"nav"} spacing={4} alignItems="center">
+            {links.map((link, i) => (
+              <NavLink
+                key={i}
+                to={link.path}
+                name={link.name}
+                w="md"
+                onClick={() => onClose()}
+              />
+            ))}
+          </Stack>
+        </Box>
+      ) : null}
     </Box>
   );
 }

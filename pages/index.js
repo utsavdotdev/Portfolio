@@ -1,6 +1,6 @@
-import Head from "next/head";
 import {
   Avatar,
+  AvatarBadge,
   Box,
   Button,
   Code,
@@ -10,24 +10,16 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Img from "../assets/pic.png";
 import Typist from "react-typist";
-import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Utsav Bhattarai</title>
-        <meta name="description" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Flex direction={"column"} align="center">
         <Flex direction={["column", "column", "row"]}>
           <Avatar
             size={"2xl"}
-            src={Img}
+            src="../assets/pic.png"
             alt="Utsav"
-            loading="eager"
             mb={4}
             display={["block", "block", "none"]}
             alignSelf={"center"}
@@ -62,7 +54,7 @@ export default function Home() {
               fontFamily={"body"}
             >
               {" "}
-              I'm a{" "}
+              I'm a <br />
               <Code animation="infinite" fontSize={"lg"}>
                 <Typist>Developer, Designer and Learner</Typist>
               </Code>
@@ -85,7 +77,14 @@ export default function Home() {
             textAlign={"center"}
             display={["none", "none", "block"]}
           >
-            <Avatar size={"2xl"} src={Img} alt="Utsav" loading="eager" mb={4} />
+            <Avatar
+              size={"2xl"}
+              src="/pic.png"
+              alt="Utsav"
+              loading="eager"
+              mb={4}
+            />
+
             <Heading fontSize="md" fontWeight={400}>
               Utsav Bhattarai
             </Heading>

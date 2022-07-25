@@ -1,12 +1,16 @@
-import React from "react";
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
-import {Box} from "@chakra-ui/layout"
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Box } from "@chakra-ui/layout";
+import Head from "next/head";
 
-
-function Layout({children}) {
+function Layout({ children }) {
   return (
     <>
+      <Head>
+        <title>Utsav Bhattarai</title>
+        <meta name="description" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
       <Box
         textAlign="center"
@@ -16,7 +20,7 @@ function Layout({children}) {
         mx="auto"
       >
         <Box pt={10} pb={10}>
-            {children}
+          {children}
         </Box>
       </Box>
       <Footer />
