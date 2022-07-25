@@ -9,7 +9,7 @@ function Layout({ children }) {
       <Head>
         <title>Utsav Bhattarai</title>
         <meta name="description" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.png" />
       </Head>
       <Navbar />
       <Box
