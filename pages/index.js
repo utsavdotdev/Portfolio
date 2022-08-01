@@ -33,7 +33,7 @@ export default function Home() {
               lineHeight="shorter"
               textAlign={{ base: "inherit", md: "start" }}
             >
-              Hey, I'm{" "}
+              Hey, I&apos;m{" "}
               <Text
                 display={"inline"}
                 w="full"
@@ -54,15 +54,15 @@ export default function Home() {
               fontFamily={"body"}
             >
               {" "}
-              I'm a <br />
+              I&apos;m a <br />
               <Code animation="infinite" fontSize={"lg"}>
                 <Typist>Developer, Designer and Learner</Typist>
               </Code>
               <br />
               <br />I code <Code colorScheme="blue"> beautifully</Code>{" "}
               <Code colorScheme="green"> simple</Code> things and I{" "}
-              <Code colorScheme="red"> love </Code> what I do but It's being
-              frustrating sometimes but result's{" "}
+              <Code colorScheme="red"> love </Code> what I do but It&apos;s being
+              frustrating sometimes but result&apos;s{" "}
               <Code colorScheme="purple">adrenaline</Code> hits different😘.
             </Text>
           </Box>

@@ -19,12 +19,12 @@ const tech = () => {
       <VStack spacing={3}>
         <VStack>
           <Heading bgClip="text" bgGradient="linear(to-l, gray.300, blue.300)">
-            <Link color={useColorModeValue("blue.500", "blue.300")}>S</Link>
+            <Link color={() => useColorModeValue("blue.500", "blue.300")}>S</Link>
             kills
           </Heading>
           <Text
             fontSize={"xl"}
-            color={useColorModeValue("gray.500", "gray.200")}
+            color={() => useColorModeValue("gray.500", "gray.200")}
             maxW="lg"
             textAlign="center"
           >

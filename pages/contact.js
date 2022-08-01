@@ -19,21 +19,21 @@ function contact() {
         w="100%"
       >
         <Text
-          color={useColorModeValue("gray.800", "gray.200")}
+          color={() => useColorModeValue("gray.800", "gray.200")}
           fontSize={28}
           mb={10}
         >
           Get In Touch
         </Text>
-        <Text fontSize={20} color={useColorModeValue("gray.800", "gray.500")}>
+        <Text fontSize={20} color={() => useColorModeValue("gray.800", "gray.500")}>
           My inbox is always open, whether you have a question or just want to
-          know me or even just to say hi , I'll try my best to get back to{" "}
+          know me or even just to say hi , I&apos;ll try my best to get back to{" "}
           <Code colorScheme={"orange"}>you! 😊</Code>
         </Text>
         <Box
           fontSize={20}
           mt={20}
-          color={useColorModeValue("gray.800", "gray.500")}
+          color={() => useColorModeValue("gray.800", "gray.500")}
         >
           {social.author.accounts.slice(0, 3).map((s, i) => (
             <IconButton

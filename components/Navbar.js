@@ -48,7 +48,7 @@ function Navbar() {
           onClick={isOpen ? onClose : onOpen}
         />
         <HStack spacing={4} alignItems={"center"}>
-          <Link href="/">
+          <Link href="/" passHref>
             <Box mr={5} display={["none", "none", "block"]}>
               <Avatar size={"sm"} src="/pic.png" />
             </Box>
