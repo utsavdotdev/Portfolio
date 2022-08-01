@@ -18,7 +18,7 @@ export default function Home() {
         <Flex direction={["column", "column", "row"]}>
           <Avatar
             size={"2xl"}
-            src="../assets/pic.png"
+            src="/pic.png"
             alt="Utsav"
             mb={4}
             display={["block", "block", "none"]}
