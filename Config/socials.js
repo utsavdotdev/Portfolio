@@ -13,7 +13,7 @@ const social = {
     name: "Utsav Bhattarai",
     accounts: [
       {
-        url: "",
+        url: "https://www.linkedin.com/in/utsav-bhattarai-3105a3237/",
         name: "LinkedIn",
         type: "linkedin",
         icon: <FaLinkedin />,
