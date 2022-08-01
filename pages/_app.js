@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Loader from "../components/loader";
 const customTheme = extendTheme({
   config: {
-    initialColorMode: "light",
+    initialColorMode: "dark",
     useSystemColorMode: false,
   },
   colors: {
