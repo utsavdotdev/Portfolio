@@ -79,7 +79,7 @@ export default function Home() {
           >
             <Avatar
               size={"2xl"}
-              src="/pic.png"
+              src="/pic.jpg"
               alt="Utsav"
               loading="eager"
               mb={4}
