@@ -11,6 +11,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Typist from "react-typist";
+import {TypeAnimation} from "react-type-animation";
 export default function Home() {
   return (
     <>
@@ -54,15 +55,27 @@ export default function Home() {
               fontFamily={"body"}
             >
               {" "}
-              I&apos;m a <br />
-              <Code animation="infinite" fontSize={"lg"}>
-                <Typist>Developer, Designer and Learner</Typist>
+              I&apos;m a{" "}
+              <Code animation="infinite" fontSize={"xl"} colorScheme="facebook">
+                <TypeAnimation
+                  sequence={[
+                    "Developer",
+                    1000,
+                    "Technical Writer",
+                    1000,
+                    "Student",
+                    1000,
+                  ]}
+                  speed={50}
+                  style={{ display: "inline-block" }}
+                  repeat={Infinity}
+                />
               </Code>
               <br />
               <br />I code <Code colorScheme="blue"> beautifully</Code>{" "}
               <Code colorScheme="green"> simple</Code> things and I{" "}
-              <Code colorScheme="red"> love </Code> what I do but It&apos;s being
-              frustrating sometimes but result&apos;s{" "}
+              <Code colorScheme="red"> love </Code> what I do but It&apos;s
+              being frustrating sometimes but result&apos;s{" "}
               <Code colorScheme="purple">adrenaline</Code> hits different😘.
             </Text>
           </Box>
@@ -89,7 +102,7 @@ export default function Home() {
               Utsav Bhattarai
             </Heading>
             <Text fontSize={"md"} fontWeight={200} color={"gray.500"} mb={4}>
-              Software Engineer Student
+             Computer Engineering Student
             </Text>
             <Stack
               align={"flex-start"}

@@ -1,8 +1,6 @@
 import "../styles/globals.css";
 import Layout from "../Layout/Layout";
 import { ChakraProvider, extendTheme, theme } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import Loader from "../components/Loader";
 const customTheme = extendTheme({
   config: {
     initialColorMode: "dark",
