@@ -14,11 +14,11 @@ const customTheme = extendTheme({
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <ChakraProvider resetCSS={true} theme={customTheme}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ChakraProvider>
+          <ChakraProvider resetCSS={true} theme={customTheme}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ChakraProvider>
     </>
   );
 }
