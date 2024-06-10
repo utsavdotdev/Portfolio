@@ -9,13 +9,13 @@ const social = {
     name: "Utsav Bhattarai",
     accounts: [
       {
-        url: "https://www.linkedin.com/in/utsavbhattarai007",
+        url: "https://www.linkedin.com/in/utsavdotdev",
         name: "LinkedIn",
         type: "linkedin",
         icon: <FaLinkedin />,
       },
       {
-        url: "https://github.com/utsavbhattarai007",
+        url: "https://github.com/utsavdotdev",
         name: "Github",
         type: "gray",
         icon: <FaGithub />,
@@ -33,7 +33,7 @@ const social = {
         icon: <FaXTwitter />,
       },
       {
-        url: "https://stackoverflow.com/users/18668200/utsav-bhattarai",
+        url: "https://stackoverflow.com/users/18668200/utsavdotdev",
         name: "Stack Overflow",
         type: "orange",
         icon: <FaStackOverflow />,
