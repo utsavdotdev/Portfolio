@@ -21,7 +21,7 @@ function Projects() {
 
   useEffect(() => {
     axios
-      .get(`https://api.github.com/users/utsavbhattarai007/repos?sort=created`)
+      .get(`https://api.github.com/users/utsavdotdev/repos?sort=created`)
       .then((res) => {
         setRepos(res.data);
         setLoading(false);
