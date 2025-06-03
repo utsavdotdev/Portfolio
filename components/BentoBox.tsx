@@ -1,13 +1,27 @@
+import { ReactNode } from "react";
+import clsx from "clsx";
+
+type BentoBoxProps = {
+  col: string;
+  children?: ReactNode;
+  border?: boolean;
+  className?: string;
+};
+
 const BentoBox = ({
-  className = "",
-  colSpan = "",
-  rowSpan = "",
+  col,
   children,
+  border = true,
+  className,
 }: BentoBoxProps) => {
   return (
     <div
-      className={`flex flex-col relative rounded-4xl border border-gray-300/20 bg-white dark:bg-neutral-900 ${colSpan} ${rowSpan} ${className}
-  items-center justify-center text-white text-xl font-nun`}
+      className={clsx(
+        `flex flex-col relative ${col} row-span-1
+         h-[230px] w-full min-w-0 min-h-0
+         overflow-hidden ${className}`,
+        border && "box"
+      )}
     >
       {children}
     </div>

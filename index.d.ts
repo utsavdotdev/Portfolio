@@ -4,8 +4,10 @@ declare interface ParamsWithSearch {
 }
 
 type BentoBoxProps = {
-  className?: string;
-  colSpan?: string;
-  rowSpan?: string;
+  col: string;
   children?: React.ReactNode;
+  border?: boolean;
+  className?: string;
 };
+
+type Theme = "light" | "dark";
