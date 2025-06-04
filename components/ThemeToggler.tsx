@@ -29,20 +29,20 @@ const ThemeToggler = () => {
     <>
       <button
         onClick={toggleTheme}
-        className="relative inline-flex h-12 w-20 items-center rounded-full bg-gray-300 p-1 transition-colors duration-300 dark:bg-[#141414] border border-gray-400/10"
-        aria-label={`Switch to ${currentTheme === "light" ? "dark" : "light"} mode`}
+        className="relative inline-flex h-12 w-20 items-center rounded-full bg-gray-300 p-1 transition-colors duration-300 dark:bg-[#232323] border border-gray-400 dark:border-[#343434]"
+        aria-label={`Switch to ${
+          currentTheme === "light" ? "dark" : "light"
+        } mode`}
       >
         <span
           className={`${
-            currentTheme === "dark"
-              ? "translate-x-8 bg-gray-950"
-              : "translate-x-0 bg-white"
-          } flex h-10 w-10 items-center justify-center rounded-full shadow-md transition-transform duration-300 ease-in-out`}
+            currentTheme === "dark" ? "translate-x-8" : "translate-x-0"
+          } flex h-10 w-10 items-center justify-center rounded-full shadow-md transition-transform  bg-neutral-950 duration-300 ease-in-out border border-gray-400/10`}
         >
           {currentTheme === "dark" ? (
             <Moon size={20} className="text-yellow-200" />
           ) : (
-            <Sun size={20} className="text-yellow-500" />
+            <Sun size={20} className="text-yellow-200" />
           )}
         </span>
       </button>

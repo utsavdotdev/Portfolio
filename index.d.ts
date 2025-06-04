@@ -11,3 +11,8 @@ type BentoBoxProps = {
 };
 
 type Theme = "light" | "dark";
+
+interface CursorPosition {
+  x: number;
+  y: number;
+}
