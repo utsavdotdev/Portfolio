@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import { Nunito, Poppins } from "next/font/google";
+import { satoshi } from "@/fonts/font";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-const dongle = Poppins({
+const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
-const nunito = Nunito({
-  variable: "--font-nunito",
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Utsav Bhattarai - Portfolio",
@@ -27,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${nunito.variable} ${dongle.variable} antialiased`}>
+      <body className={`${satoshi.variable} ${poppins.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>

@@ -4,16 +4,11 @@ import React, { useState } from "react";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Subscribing email:", email);
-    setEmail("");
-  };
+  const handleSubmit = () => {};
 
   return (
     <div className="w-full h-full py-8 px-8 font-nun flex items-center text-gray-800 dark:text-gray-200">
-      <div className="w-full flex flex-col gap-2 font-pops ">
+      <div className="w-full flex flex-col gap-2 font-pops">
         <h3 className="text-2xl mb-4">
           Get interesting content straight to your inbox for free!
         </h3>
