@@ -8,12 +8,12 @@ import CustomCursor from "@/components/CustomCursor";
 export default function Home() {
   return (
     <div className="flex flex-col w-full min-h-screen p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300">
-      <CustomCursor/>
+      <CustomCursor />
       <main className="w-full h-full border-2 rounded-4xl border-gray-300 dark:border-gray-300/20 p-2 bg-white dark:bg-neutral-950 transition-colors duration-300">
         <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-13 gap-4 p-4 h-full place-content-center  transition-colors duration-300">
           <BentoBox col="col-span-4">
             <div className="h-full py-8 px-8 font-pops flex flex-col justify-center text-gray-800 dark:text-gray-300 gap-4">
-              <h3 className="text-3xl font-medium">Hi I'm Utsav ---</h3>
+              <h3 className="text-3xl font-medium">Hi I&apos;m Utsav,</h3>
               <span className="text-xl text-gray-500 dark:text-neutral-500">
                 A Next.js Developer, Student, and Open-Source Contributor
               </span>

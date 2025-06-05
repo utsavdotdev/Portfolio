@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { satoshi } from "@/fonts/font";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
