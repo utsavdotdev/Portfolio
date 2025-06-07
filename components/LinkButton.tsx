@@ -1,4 +1,3 @@
-import { MoveUpRight } from "lucide-react";
 import {ArrowUpRightIcon} from "@heroicons/react/24/outline";
 
 const LinkButton = ({ className }: LinkButtonProps) => {
