@@ -36,12 +36,12 @@ export default function CustomCursor() {
   const trail3X = useSpring(cursorX, {
     damping: 15,
     stiffness: 200,
-    mass: 0.5,
+    mass: 0.8,
   });
   const trail3Y = useSpring(cursorY, {
     damping: 15,
     stiffness: 200,
-    mass: 0.5,
+    mass: 0.8,
   });
 
   useEffect(() => {
@@ -93,7 +93,7 @@ export default function CustomCursor() {
         className="fixed top-0 left-0 pointer-events-none z-40"
         style={{ x: trail1X, y: trail1Y }}
       >
-        <div className="w-6 h-6 bg-[#606060]/30 rounded-full -translate-x-1/2 -translate-y-1/2" />
+        <div className="w-6 h-6 bg-[#606060]/20 rounded-full -translate-x-1/2 -translate-y-1/2" />
       </motion.div>
 
       {/* Main cursor - solid */}

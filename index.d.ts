@@ -16,3 +16,11 @@ interface CursorPosition {
   x: number;
   y: number;
 }
+
+type LinkButtonProps = { className?: string };
+
+interface SocialMedia {
+  name: string;
+  url: string;
+  icon: LucideIcon;
+}

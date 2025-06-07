@@ -2,8 +2,11 @@ import React from "react";
 import BentoBox from "@/components/BentoBox";
 import ThemeToggler from "@/components/ThemeToggler";
 import Newsletter from "@/components/Newsletter";
-import { MousePointer2 } from "lucide-react";
 import CustomCursor from "@/components/CustomCursor";
+import LinkButton from "@/components/LinkButton";
+import { socialMedia } from "@/constants/data";
+import Link from "next/link";
+import { hover } from "framer-motion";
 
 export default function Home() {
   return (
@@ -26,51 +29,66 @@ export default function Home() {
           <BentoBox col="col-span-3" border={false} className="pl-2">
             <div className="flex flex-col gap-4">
               <div className="flex gap-8">
-                <div className="h-18 w-18 box rounded-3xl"></div>
-                <div className="h-18 w-18 box rounded-3xl"></div>
-                <div className="h-18 w-18 box rounded-3xl"></div>
+                {socialMedia.slice(0, 3).map((social) => (
+                  <Link
+                    href={social.url}
+                    key={social.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      className={`h-18 w-18 box rounded-3xl flex items-center justify-center cursor-pointer transition-all duration-300 group hover:bg-gray-100 dark:hover:bg-neutral-900`}
+                    >
+                      <social.icon className="h-6 w-6 text-gray-700 dark:text-gray-200 transition-colors" />
+                    </div>
+                  </Link>
+                ))}
               </div>
               <div className="flex gap-8">
-                <div className="h-18 w-18 box rounded-3xl"></div>
-                <div className="h-18 w-18 box rounded-3xl"></div>
-                <div className="h-18 w-18 box rounded-3xl"></div>
+                {socialMedia.slice(3).map((social) => (
+                  <Link
+                    href={social.url}
+                    key={social.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="h-18 w-18 box rounded-3xl flex items-center justify-center cursor-pointer transition-all duration-300 group hover:bg-gray-100 dark:hover:bg-neutral-900">
+                      <social.icon className="h-6 w-6 text-gray-700 dark:text-gray-200 transition-colors" />
+                    </div>
+                  </Link>
+                ))}
               </div>
-              <ThemeToggler />
             </div>
           </BentoBox>
 
           <BentoBox col="col-span-3"></BentoBox>
           <BentoBox col="col-span-5">
-            <div className="h-full py-6 px-8 font-pops flex flex-col text-gray-800 dark:text-gray-300 gap-4 cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 group">
+            <div className="h-full py-6 px-8 font-pops flex flex-col text-gray-800 dark:text-gray-300 gap-4 cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-900 group">
               <span className="text-xl text-gray-500 dark:text-neutral-500">
                 About
               </span>
               <h3 className="text-[22px] font-small mt-2">
                 Enjoy Crafting solutions and solving problems.
               </h3>
-              <div className="flex flex-col">
-                <div className="w-12 h-12 flex justify-center align-center self-end rounded-full border-2 border-[#626262] transition-all duration-300 overflow-hidden relative">
-                  {/* Arrow coming FROM bottom on hover */}
-                  <MousePointer2
-                    className="rotate-90 w-6 h-6 absolute transition-all duration-500 
-                    translate-x-[-30px] translate-y-[30px] opacity-0
-                    group-hover:translate-x-[0px] group-hover:translate-y-[10px] 
-                    group-hover:opacity-100"
-                  />
-
-                  {/* Arrow going TO top on hover */}
-                  <MousePointer2
-                    className="rotate-90 w-6 h-6 absolute transition-all duration-500 
-                    translate-x-[0px] translate-y-[10px] opacity-100
-                    group-hover:translate-x-[30px] group-hover:translate-y-[-30px] 
-                    group-hover:opacity-0"
-                  />
-                </div>
-              </div>
+              <LinkButton />
             </div>
           </BentoBox>
           <BentoBox col="col-span-3"></BentoBox>
-          <BentoBox col="col-span-2"></BentoBox>
+          <BentoBox col="col-span-2" border={false} className="gap-4 py-1">
+            <div className="relative box h-1/3 flex rounded-2xl hover:bg-gray-100 dark:hover:bg-neutral-900 group gap-2 items-center justify-center">
+              <span className="font-pops text-[22px] text-gray-800 dark:text-gray-300 tracking-wide">
+                Projects
+              </span>
+              <LinkButton className="scale-70" />
+            </div>
+            <div className="relative box h-1/3 flex rounded-2xl hover:bg-gray-100 dark:hover:bg-neutral-900 group gap-2 items-center justify-center">
+              <span className="font-pops text-[22px] text-gray-800 dark:text-gray-300 tracking-wide">
+                Blogs
+              </span>
+              <LinkButton className="scale-70" />
+            </div>
+            <ThemeToggler />
+          </BentoBox>
 
           <BentoBox col="col-span-7">
             <Newsletter />

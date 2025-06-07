@@ -1,12 +1,4 @@
-import { ReactNode } from "react";
 import clsx from "clsx";
-
-type BentoBoxProps = {
-  col: string;
-  children?: ReactNode;
-  border?: boolean;
-  className?: string;
-};
 
 const BentoBox = ({
   col,
