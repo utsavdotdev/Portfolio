@@ -131,6 +131,8 @@ export default function Home() {
                         src={tech.icon}
                         alt={tech.name}
                         className="w-full h-full object-contain"
+                        width={16}
+                        height={16}
                       />
                     </div>
                     <span className="text-sm font-satoshi text-gray-800 dark:text-gray-300">
@@ -150,6 +152,8 @@ export default function Home() {
                         src={tech.icon}
                         alt={tech.name}
                         className="w-full h-full object-contain"
+                        width={16}
+                        height={16}
                       />
                     </div>
                     <span className="text-sm font-satoshi text-gray-800 dark:text-gray-300">

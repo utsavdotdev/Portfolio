@@ -1,10 +1,9 @@
-import { typeMetadata } from "next";
 declare interface ParamsWithSearch {
   params: Promise<Record<string, string>>;
   searchParams: Promise<Record<string, string | undefined>>;
 }
 
-type BentoBoxProps = {
+declare type BentoBoxProps = {
   col: string;
   children?: React.ReactNode;
   border?: boolean;
@@ -21,7 +20,7 @@ interface CursorPosition {
 interface LinkButtonProps {
   className?: string;
   link?: string;
-  type?:string
+  type?: string;
 }
 
 interface SocialMedia {
