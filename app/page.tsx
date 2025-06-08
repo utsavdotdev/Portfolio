@@ -1,14 +1,25 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import BentoBox from "@/components/BentoBox";
 import ThemeToggler from "@/components/ThemeToggler";
 import Newsletter from "@/components/Newsletter";
 import CustomCursor from "@/components/CustomCursor";
 import LinkButton from "@/components/LinkButton";
-import { socialMedia } from "@/constants/data";
+import { socialMedia, stack } from "@/constants/data";
+import { Copy, Check } from "lucide-react";
 import Link from "next/link";
-import { hover } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
+  const [copy, setCopy] = useState(false);
+  const copyEmail = async () => {
+    setCopy(true);
+    try {
+      await navigator.clipboard.writeText("utsavdotdev@gmail.com");
+    } catch (err) {
+      console.error("Failed to read clipboard contents:", err);
+    }
+  };
   return (
     <div className="flex flex-col w-full min-h-screen p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300">
       <CustomCursor />
@@ -58,6 +69,7 @@ export default function Home() {
                   </Link>
                 ))}
               </div>
+              <ThemeToggler />
             </div>
           </BentoBox>
 
@@ -87,14 +99,88 @@ export default function Home() {
               </span>
               <LinkButton className="scale-70" />
             </div>
-            <ThemeToggler />
+            <Link
+              href={"/resume.pdf"}
+              download={true}
+              className="relative box h-1/3 flex rounded-2xl hover:bg-gray-100 dark:hover:bg-neutral-900 group gap-2 items-center justify-center"
+            >
+              <span className="font-pops text-[22px] text-gray-800 dark:text-gray-300 tracking-wide">
+                Resume
+              </span>
+              <LinkButton className="scale-70" />
+            </Link>
           </BentoBox>
 
           <BentoBox col="col-span-7">
             <Newsletter />
           </BentoBox>
-          <BentoBox col="col-span-3"></BentoBox>
-          <BentoBox col="col-span-3"></BentoBox>
+          <BentoBox col="col-span-3" className="p-6 gap-4">
+            <span className="text-2xl font-pops text-gray-800 dark:text-gray-300 mb-4 block">
+              Stack I Use
+            </span>
+            <div className="h-full overflow-hidden">
+              <div className="tech-stack-slider flex items-center justify-start">
+                {/* First set of icons */}
+                {stack.map((tech, index) => (
+                  <div
+                    key={`tech-1-${index}`}
+                    className="flex flex-col items-center justify-center mx-4"
+                  >
+                    <div className="w-16 h-16 mb-3 p-3 bg-[#dee0e1] dark:bg-[#222222] rounded-xl">
+                      <Image
+                        src={tech.icon}
+                        alt={tech.name}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <span className="text-sm font-satoshi text-gray-800 dark:text-gray-300">
+                      {tech.name}
+                    </span>
+                  </div>
+                ))}
+
+                {/* Duplicate set for seamless loop */}
+                {stack.map((tech, index) => (
+                  <div
+                    key={`tech-2-${index}`}
+                    className="flex flex-col items-center justify-center mx-4"
+                  >
+                    <div className="w-16 h-16 mb-3 p-3 bg-[#dee0e1] dark:bg-[#222222] rounded-xl">
+                      <Image
+                        src={tech.icon}
+                        alt={tech.name}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <span className="text-sm font-satoshi text-gray-800 dark:text-gray-300">
+                      {tech.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </BentoBox>
+          <BentoBox col="col-span-3" className="px-6 py-8 gap-6">
+            <span className="text-2xl font-pops text-gray-800 dark:text-gray-300">
+              Have project in mind?
+            </span>
+            <div
+              className="rounded-xl font-pops w-full h-16 bg-[#232323] dark:bg-[#252525] flex items-center justify-center text-white text-lg cursor-pointer transition-colors hover:bg-[#1f1f1f] dark:hover:bg-[#2a2a2a] gap-3"
+              onClick={() => copyEmail()}
+            >
+              {copy ? (
+                <>
+                  <Check className="text-green-600" />
+                  <span className="text-green-600">Email Copied!</span>
+                </>
+              ) : (
+                <>
+                  <Copy />
+                  Copy Email
+                </>
+              )}
+            </div>
+          </BentoBox>
         </div>
       </main>
     </div>

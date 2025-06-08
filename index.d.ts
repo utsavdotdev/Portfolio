@@ -1,3 +1,4 @@
+import { typeMetadata } from "next";
 declare interface ParamsWithSearch {
   params: Promise<Record<string, string>>;
   searchParams: Promise<Record<string, string | undefined>>;
@@ -17,10 +18,19 @@ interface CursorPosition {
   y: number;
 }
 
-type LinkButtonProps = { className?: string };
+interface LinkButtonProps {
+  className?: string;
+  link?: string;
+  type?:string
+}
 
 interface SocialMedia {
   name: string;
   url: string;
   icon: LucideIcon;
 }
+
+type Stack = {
+  name: string;
+  icon: string;
+};

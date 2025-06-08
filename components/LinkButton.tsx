@@ -1,9 +1,16 @@
-import {ArrowUpRightIcon} from "@heroicons/react/24/outline";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+interface LinkButtonProps {
+  className?: string;
+  link?: string;
+  type?: string;
+}
 
-const LinkButton = ({ className }: LinkButtonProps) => {
+const LinkButton = ({ className = "" }: LinkButtonProps) => {
   return (
     <>
-      <div className={`flex flex-col ${className}`}>
+      <div
+        className={`flex flex-col ${className}`}
+      >
         <div className="w-12 h-12 flex justify-center align-center self-end rounded-full border-2 border-[#626262] transition-all duration-300 overflow-hidden relative">
           <ArrowUpRightIcon
             className="w-6 h-6 absolute transition-all duration-500 

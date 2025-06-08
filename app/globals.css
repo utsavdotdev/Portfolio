@@ -35,4 +35,17 @@
     backface-visibility: hidden;
     perspective: 1000px;
   }
+  @keyframes tech-slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%) }
+  }
+  
+  .tech-stack-slider {
+    animation: tech-slide 30s linear infinite;
+    width: max-content;
+  }
+  
+  .tech-stack-slider:hover {
+    animation-play-state: paused;
+  }
 }
