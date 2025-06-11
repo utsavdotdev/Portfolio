@@ -13,7 +13,7 @@ declare type BentoBoxProps = {
 type Theme = "light" | "dark";
 
 interface CursorPosition {
-  x: number;
+  x: number;  
   y: number;
 }
 
@@ -33,3 +33,15 @@ type Stack = {
   name: string;
   icon: string;
 };
+
+
+interface PixelTransitionProps {
+  firstContent: ReactNode;
+  secondContent: ReactNode;
+  gridSize?: number;
+  pixelColor?: string;
+  animationStepDuration?: number;
+  className?: string;
+  style?: React.CSSProperties;
+  aspectRatio?: string;
+}
