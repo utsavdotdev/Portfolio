@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, ReactNode } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 
 function PixelTransition({

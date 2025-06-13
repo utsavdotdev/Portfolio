@@ -77,7 +77,7 @@ export default function Home() {
                   height={256}
                   src="/profile-pixel.png"
                   alt="pixel profile"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  style={{ width: "100%", height: "100%", objectFit: "contain", backgroundColor: "#f2e7bc" }}
                 />
               }
               gridSize={20}
