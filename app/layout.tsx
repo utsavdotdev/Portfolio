@@ -10,7 +10,6 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
   title: "Utsav Bhattarai - Portfolio",
   description: "A Nextjs Developer, Student and Open-Source contributor",
