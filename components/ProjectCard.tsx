@@ -6,14 +6,12 @@ interface ProjectCardProps {
   title: string;
   imageSrc: string;
   link: string;
-  className?: string;
 }
 
 const ProjectCard = ({
   title,
   imageSrc,
   link,
-  className = "",
 }: ProjectCardProps) => {
   return (
     <Link href={link}>

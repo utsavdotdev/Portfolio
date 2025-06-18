@@ -10,7 +10,6 @@ import { Copy, Check } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import PixelTransition from "@/components/PixelTransition";
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
