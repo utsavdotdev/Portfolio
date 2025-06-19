@@ -10,7 +10,15 @@ const Spark = ({
   easing = "ease-out",
   extraScale = 1.0,
   children,
-}) => {
+}): {
+  sparkSize?: number;
+  sparkRadius?: number;
+  sparkCount?: number;
+  duration?: number;
+  easing?: "linear" | "ease-in" | "ease-in-out" | "ease-out";
+  extraScale?: number;
+  children?: React.ReactNode;
+} => {
   let sparkColor;
   const canvasRef = useRef(null);
   const sparksRef = useRef([]);
@@ -18,9 +26,9 @@ const Spark = ({
   const { theme } = useTheme();
 
   if (theme === "dark") {
-    sparkColor = "#ffffff"; 
+    sparkColor = "#ffffff";
   } else {
-    sparkColor = "#808080"; 
+    sparkColor = "#808080";
   }
 
   useEffect(() => {
