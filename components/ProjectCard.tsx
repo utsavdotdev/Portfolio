@@ -35,7 +35,7 @@ const ProjectCard = ({
             {title}
           </h3>
           <div className="p-2 transform rotate-0 group-hover:rotate-45 transition-transform duration-300">
-            <ArrowUpRightIcon className="w-6 h-6 text-black dark:text-white font-bold stroke-2"/>
+            <ArrowUpRightIcon className="w-6 h-6 text-white font-bold stroke-2"/>
           </div>
         </div>
       </div>
