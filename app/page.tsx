@@ -10,7 +10,6 @@ import Link from "next/link";
 import Image from "next/image";
 import PixelTransition from "@/components/PixelTransition";
 import ProjectCard from "@/components/ProjectCard";
-import Spark from "@/components/Spark";
 
 export default function Home() {
   const [copy, setCopy] = useState(false);
@@ -24,7 +23,6 @@ export default function Home() {
   };
   return (
     <div className="flex flex-col w-full min-h-screen 2xl:h-screen p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300">
-      {/* <CustomCursor /> */}
       <main className="w-full h-full border-2 rounded-4xl border-gray-300 dark:border-gray-300/20 p-2 bg-white dark:bg-neutral-950 transition-colors duration-300">
         <div className="grid grid-cols-8 lg:grid-cols-13 gap-4 p-2 md:p-4 h-full transition-colors duration-300">
           <BentoBox
@@ -91,7 +89,7 @@ export default function Home() {
 
           <BentoBox
             col="col-span-3"
-            className="hidden md:block order-2 lg:order-none"
+            className="hidden md:block order-2 lg:order-none cursor-pointer"
           >
             <PixelTransition
               firstContent={
@@ -127,17 +125,18 @@ export default function Home() {
             col="col-span-full md:col-span-5 lg:col-span-5"
             className="order-2 lg:order-none"
           >
-            <Spark>
-              <div className="h-full py-6 px-8 font-pops flex flex-col text-gray-800 dark:text-gray-300 gap-4 cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-900 group">
-                <span className="text-xl text-gray-500 dark:text-neutral-500">
-                  About
-                </span>
-                <h3 className="text-xl md:text-2xl font-small mt-2">
-                  Enjoy Crafting solutions and solving problems.
-                </h3>
-                <LinkButton />
-              </div>
-            </Spark>  
+            <Link
+              href="/about"
+              className="h-full py-6 px-8 font-pops flex flex-col text-gray-800 dark:text-gray-300 gap-4 cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-900 group"
+            >
+              <span className="text-xl text-gray-500 dark:text-neutral-500">
+                About
+              </span>
+              <h3 className="text-xl md:text-2xl font-small mt-2">
+                Enjoy Crafting solutions and solving problems.
+              </h3>
+              <LinkButton />
+            </Link>
           </BentoBox>
           <BentoBox
             col="col-span-full md:col-span-5 lg:col-span-3"
