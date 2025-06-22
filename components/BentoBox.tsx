@@ -9,7 +9,7 @@ const BentoBox = ({
   return (
     <div
       className={clsx(
-        `flex flex-col relative ${col} row-span-1
+        `flex flex-col relative ${col}
         w-full min-w-full min-h-full
          overflow-hidden ${className}`,
         border ? "box rounded-3xl h-content md:h-[230px]" : "h-full"

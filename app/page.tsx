@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full min-h-screen 2xl:h-screen p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300">
       <main className="w-full h-full border-2 rounded-4xl border-gray-300 dark:border-gray-300/20 p-2 bg-white dark:bg-neutral-950 transition-colors duration-300">
-        <div className="grid grid-cols-8 lg:grid-cols-13 gap-4 p-2 md:p-4 h-full transition-colors duration-300">
+        <div className="grid grid-cols-8 lg:grid-cols-13 gap-4 p-2 md:p-4 h-full">
           <BentoBox
             col="col-span-8 lg:col-span-4"
             className="order-1 lg:order-none"
