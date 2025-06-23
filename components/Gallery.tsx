@@ -1,7 +1,7 @@
 "use client";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 type Pics = {
@@ -10,6 +10,21 @@ type Pics = {
 
 const Gallery = ({ pics }: { pics: Pics[] }) => {
   const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight") {
+        handleNext();
+      } else if (event.key === "ArrowLeft") {
+        handlePrev();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   const handleNext = () => {
     setActive((prev) => (prev + 1) % pics.length);

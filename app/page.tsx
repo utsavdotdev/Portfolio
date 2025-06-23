@@ -1,26 +1,16 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import BentoBox from "@/components/BentoBox";
 import ThemeToggler from "@/components/ThemeToggler";
 import Newsletter from "@/components/Newsletter";
 import LinkButton from "@/components/LinkButton";
 import { socialMedia, stack } from "@/constants/data";
-import { Copy, Check } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import PixelTransition from "@/components/PixelTransition";
 import ProjectCard from "@/components/ProjectCard";
+import CopyEmail from "@/components/CopyEmail";
 
 export default function Home() {
-  const [copy, setCopy] = useState(false);
-  const copyEmail = async () => {
-    setCopy(true);
-    try {
-      await navigator.clipboard.writeText("utsavdotdev@gmail.com");
-    } catch (err) {
-      console.error("Failed to read clipboard contents:", err);
-    }
-  };
   return (
     <div className="flex flex-col w-full min-h-screen 2xl:h-screen p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300">
       <main className="w-full h-full border-2 rounded-4xl border-gray-300 dark:border-gray-300/20 p-2 bg-white dark:bg-neutral-950 transition-colors duration-300">
@@ -240,25 +230,7 @@ export default function Home() {
             col="col-span-full md:col-span-3"
             className="px-6 py-8 gap-6 order-5 lg:order-none"
           >
-            <span className="text-xl md:text-2xl font-pops text-gray-800 dark:text-gray-300">
-              Have project in mind?
-            </span>
-            <div
-              className="rounded-xl font-pops w-full h-16 bg-[#232323] dark:bg-[#252525] flex items-center justify-center text-white text-md md:text-lg cursor-pointer transition-colors hover:bg-[#1f1f1f] dark:hover:bg-[#2a2a2a] gap-3 "
-              onClick={() => copyEmail()}
-            >
-              {copy ? (
-                <>
-                  <Check className="text-green-600" />
-                  <span className="text-green-600">Email Copied!</span>
-                </>
-              ) : (
-                <>
-                  <Copy />
-                  Copy Email
-                </>
-              )}
-            </div>
+            <CopyEmail />
           </BentoBox>
         </div>
       </main>
