@@ -18,7 +18,7 @@ const Close = () => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [handleClose]);
   return (
     <>
       <div className="absolute top-4 right-6 flex flex-col items-center gap-1">

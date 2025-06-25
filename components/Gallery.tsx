@@ -11,6 +11,14 @@ type Pics = {
 const Gallery = ({ pics }: { pics: Pics[] }) => {
   const [active, setActive] = useState(0);
 
+  const handleNext = () => {
+    setActive((prev) => (prev + 1) % pics.length);
+  };
+
+  const handlePrev = () => {
+    setActive((prev) => (prev - 1 + pics.length) % pics.length);
+  };
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "ArrowRight") {
@@ -24,15 +32,9 @@ const Gallery = ({ pics }: { pics: Pics[] }) => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [handlePrev, handleNext]);
 
-  const handleNext = () => {
-    setActive((prev) => (prev + 1) % pics.length);
-  };
-
-  const handlePrev = () => {
-    setActive((prev) => (prev - 1 + pics.length) % pics.length);
-  };
+  
 
   const isActive = (index: number) => {
     return index === active;

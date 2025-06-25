@@ -3,12 +3,13 @@ import BentoBox from "@/components/BentoBox";
 import ThemeToggler from "@/components/ThemeToggler";
 import Newsletter from "@/components/Newsletter";
 import LinkButton from "@/components/LinkButton";
-import { socialMedia, stack } from "@/constants/data";
+import { socialMedia } from "@/constants/data";
 import Link from "next/link";
 import Image from "next/image";
 import PixelTransition from "@/components/PixelTransition";
 import ProjectCard from "@/components/ProjectCard";
 import CopyEmail from "@/components/CopyEmail";
+import Stack from "@/components/Stack";
 
 export default function Home() {
   return (
@@ -175,56 +176,9 @@ export default function Home() {
           </BentoBox>
           <BentoBox
             col="col-span-full md:col-span-5 lg:col-span-3"
-            className="p-6 gap-4 order-5 lg:order-none"
+            className="order-5 lg:order-none"
           >
-            <span className="text-2xl font-pops text-gray-800 dark:text-gray-300 mb-4 block">
-              Stack I Use
-            </span>
-            <div className="h-full overflow-hidden">
-              <div className="tech-stack-slider flex items-center justify-start">
-                {/* First set of icons */}
-                {stack.map((tech, index) => (
-                  <div
-                    key={`tech-1-${index}`}
-                    className="flex flex-col items-center justify-center mx-4"
-                  >
-                    <div className="w-16 h-16 mb-3 p-3 bg-[#dee0e1] dark:bg-[#222222] rounded-xl">
-                      <Image
-                        src={tech.icon}
-                        alt={tech.name}
-                        className="w-full h-full object-contain"
-                        width={16}
-                        height={16}
-                      />
-                    </div>
-                    <span className="text-sm font-satoshi text-gray-800 dark:text-gray-300">
-                      {tech.name}
-                    </span>
-                  </div>
-                ))}
-
-                {/* Duplicate set for seamless loop */}
-                {stack.map((tech, index) => (
-                  <div
-                    key={`tech-2-${index}`}
-                    className="flex flex-col items-center justify-center mx-4"
-                  >
-                    <div className="w-16 h-16 mb-3 p-3 bg-[#dee0e1] dark:bg-[#222222] rounded-xl">
-                      <Image
-                        src={tech.icon}
-                        alt={tech.name}
-                        className="w-full h-full object-contain"
-                        width={16}
-                        height={16}
-                      />
-                    </div>
-                    <span className="text-sm font-satoshi text-gray-800 dark:text-gray-300">
-                      {tech.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Stack  />
           </BentoBox>
           <BentoBox
             col="col-span-full md:col-span-3"
