@@ -12,7 +12,7 @@ const BentoBox = ({
         `flex flex-col relative ${col}
         w-full min-w-full min-h-full
          overflow-hidden ${className}`,
-        border ? "box rounded-3xl h-content md:h-[230px]" : "h-full"
+        border ? "box rounded-3xl h-content lg:h-[230px]" : "h-full"
       )}
     >
       {children}
