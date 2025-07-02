@@ -32,6 +32,6 @@ Projects
 
 # Todo List
 
-- [ ] Make the bento box more dynamic and responsive
-- [ ] Add theme switcher
-- [ ] Fill the bento box
+- [] Make Project section
+- [] Make individual project page
+- [] Solve the height design flaw

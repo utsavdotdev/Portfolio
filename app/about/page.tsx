@@ -61,8 +61,42 @@ const page = () => {
               </BentoBox>
               <BentoBox
                 col="col-span-1 lg:col-start-1 lg:col-end-5 lg:row-start-6 lg:row-end-9"
-                className="h-40"
-              ></BentoBox>
+                className="px-7 py-5 font-pops gap-4"
+              >
+                <h2 className="text-xl font-medium text-gray-900 dark:text-gray-200/90">
+                  Experience
+                </h2>
+                <div className="flex flex-col gap-4">
+                  {/* Experience Timeline */}
+                  <ol className="relative border-l-2 border-gray-300 dark:border-neutral-800 ml-2">
+                    {[
+                      {
+                        position: "Technical and Content Lead",
+                        company: "UbuCon Asia 2025",
+                        year: "2025 - Present",
+                      },
+                      {
+                        position: "Community Maintainer",
+                        company: "GNOME Nepal",
+                        year: "2024 - Present",
+                      },
+                    ].map((exp, idx) => (
+                      <li key={idx} className="mb-8 ml-4">
+                        <div className="absolute w-3 h-3 bg-neutral-500 rounded-full -left-1.5 border-2 border-white dark:border-gray-900"></div>
+                        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                          {exp.year}
+                        </time>
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-200">
+                          {exp.position}
+                        </h3>
+                        <p className="text-md text-gray-600 dark:text-gray-400">
+                          {exp.company}
+                        </p>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </BentoBox>
               <BentoBox
                 col="col-span-1 lg:col-start-5 lg:col-end-9 lg:row-start-4 lg:row-end-7"
                 className="flex items-center justify-center"
@@ -70,15 +104,11 @@ const page = () => {
                 <Gallery pics={images} />
               </BentoBox>
               <BentoBox
-                col="col-span-1 lg:col-start-5 lg:col-end-7 lg:row-start-7 lg:row-end-9"
+                col="col-span-1 lg:col-start-5 lg:col-end-9 lg:row-start-7 lg:row-end-9"
                 className="flex items-center justify-center px-6 py-6 md:py-0 gap-6 md:gap-8"
               >
                 <CopyEmail />
               </BentoBox>
-              <BentoBox
-                col="col-span-1 lg:col-start-7 lg:col-end-9 lg:row-start-7 lg:row-end-9"
-                className="h-40"
-              ></BentoBox>
             </div>
           </main>
         </div>
