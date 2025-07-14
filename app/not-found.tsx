@@ -1,7 +1,6 @@
 import FuzzyText from "@/components/FuzzyText";
 import React from "react";
 import Link from "next/link";
-import { color } from "framer-motion";
 
 export default function NotFound() {
   return (
