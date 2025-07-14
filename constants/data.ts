@@ -74,3 +74,27 @@ export const stack: Stack[] = [
     icon: "/assets/stack/zen.svg",
   },
 ];
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: "E-Commerce Platform",
+    subtitle: "Full-stack web application with payment integration",
+    label: "React",
+    image: "/placeholder.svg?height=200&width=400",
+  },
+  {
+    id: 2,
+    title: "Task Management App",
+    subtitle: "Collaborative productivity tool with real-time updates",
+    label: "Next.js",
+    image: "/placeholder.svg?height=200&width=400",
+  },
+  {
+    id: 3,
+    title: "Weather Dashboard",
+    subtitle: "Interactive weather forecasting with data visualization",
+    label: "Vue.js",
+    image: "/placeholder.svg?height=200&width=400",
+  },
+];

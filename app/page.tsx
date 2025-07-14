@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import BentoBox from "@/components/BentoBox";
 import ThemeToggler from "@/components/ThemeToggler";
@@ -144,12 +145,12 @@ export default function Home() {
             border={false}
             className="gap-4 order-4 lg:order-none"
           >
-            <div className="relative box h-1/3 flex rounded-2xl hover:bg-gray-100 dark:hover:bg-neutral-900 group items-center justify-center py-1 cursor-pointer">
+            <Link href={"/project"} className="relative box h-1/3 flex rounded-2xl hover:bg-gray-100 dark:hover:bg-neutral-900 group items-center justify-center py-1 cursor-pointer">
               <span className="font-pops text-[20px] text-gray-800 dark:text-gray-300">
                 Projects
               </span>
               <LinkButton className=" scale-70" />
-            </div>
+            </Link>
             <div className="relative box h-1/3 flex rounded-2xl hover:bg-gray-100 dark:hover:bg-neutral-900 group gap-1 items-center justify-center text-center py-1 cursor-pointer">
               <span className="font-pops text-[20px] text-gray-800 dark:text-gray-300 tracking-wide max-[1180px]:text-[18px]">
                 Blogs

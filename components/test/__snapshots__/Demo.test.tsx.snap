@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Jest Platform Features Jest Diff should show differences between two strings 1`] = `
+"[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- Hello, Jest![39m
+[31m+ Hello, world![39m"
+`;
+
+exports[`Jest Platform Features Jest Diff should show differences in objects 1`] = `
+"[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  Object {[22m
+[32m-   "age": 31,[39m
+[31m+   "age": 30,[39m
+[2m    "name": "Alice",[22m
+[2m  }[22m"
+`;

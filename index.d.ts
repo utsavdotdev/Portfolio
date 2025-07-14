@@ -10,6 +10,24 @@ declare type BentoBoxProps = {
   className?: string;
 };
 
+type ProjectBoxProps = {
+  project: {
+    id: number;
+    title: string;
+    subtitle: string;
+    label: string;
+    image?: string;
+  };
+};
+
+type Project = {
+  id: number;
+  title: string;
+  subtitle: string; 
+  label: string;
+  image?: string;
+}
+
 type Theme = "light" | "dark";
 
 interface CursorPosition {
