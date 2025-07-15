@@ -17,7 +17,7 @@ const FuzzyText: React.FC<FuzzyTextProps> = ({
   fontSize = "clamp(2rem, 4vw, 4rem)",
   fontWeight = 900,
   fontFamily = "inherit",
-  color = "#fff",
+  color = "currentColor", // Changed from "#fff" to "currentColor"
   enableHover = true,
   baseIntensity = 0.18,
   hoverIntensity = 0.5,
@@ -45,6 +45,12 @@ const FuzzyText: React.FC<FuzzyTextProps> = ({
         fontFamily === "inherit"
           ? window.getComputedStyle(canvas).fontFamily || "sans-serif"
           : fontFamily;
+
+      // Get the actual computed color from the canvas element
+      const computedColor =
+        color === "currentColor"
+          ? window.getComputedStyle(canvas).color
+          : color;
 
       const fontSizeStr =
         typeof fontSize === "number" ? `${fontSize}px` : fontSize;
@@ -88,7 +94,7 @@ const FuzzyText: React.FC<FuzzyTextProps> = ({
       const xOffset = extraWidthBuffer / 2;
       offCtx.font = `${fontWeight} ${fontSizeStr} ${computedFontFamily}`;
       offCtx.textBaseline = "alphabetic";
-      offCtx.fillStyle = color;
+      offCtx.fillStyle = computedColor; // Use computed color instead of hardcoded color
       offCtx.fillText(text, xOffset - actualLeft, actualAscent);
 
       const horizontalMargin = 50;
@@ -207,7 +213,12 @@ const FuzzyText: React.FC<FuzzyTextProps> = ({
     hoverIntensity,
   ]);
 
-  return <canvas ref={canvasRef} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      // className="text-neutral-900 dark:text-neutral-100"
+    />
+  );
 };
 
 export default FuzzyText;

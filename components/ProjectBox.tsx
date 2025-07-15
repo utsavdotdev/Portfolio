@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectBox = ({ project }): ProjectBoxProps => {
+const ProjectBox = ({ project }: ProjectBoxProps) => {
   return (
     <>
       <div
