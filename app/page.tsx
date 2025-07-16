@@ -30,6 +30,7 @@ export default function Home() {
               </span>
             </div>
           </BentoBox>
+          
           <BentoBox
             col="col-span-full md:col-span-4 lg:col-span-3"
             className="order-3 lg:order-none h-[200px] relative group"

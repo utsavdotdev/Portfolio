@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const ProjectBox = ({ project }: ProjectBoxProps) => {
@@ -10,7 +11,9 @@ const ProjectBox = ({ project }: ProjectBoxProps) => {
         <div className="p-4">
           <div className="mb-4">
             <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 dark:from-gray-800 dark:to-gray-700 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
-              <img
+              <Image
+                width={500}
+                height={300}
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
