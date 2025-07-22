@@ -1,3 +1,4 @@
+import { Link } from 'next/link';
 declare interface ParamsWithSearch {
   params: Promise<Record<string, string>>;
   searchParams: Promise<Record<string, string | undefined>>;
@@ -17,6 +18,7 @@ type ProjectBoxProps = {
     subtitle: string;
     label: string;
     image?: string;
+    link: string;
   };
 };
 
@@ -26,6 +28,7 @@ type Project = {
   subtitle: string; 
   label: string;
   image?: string;
+  link: string;
 }
 
 type Theme = "light" | "dark";

@@ -14,7 +14,7 @@ import Stack from "@/components/Stack";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full min-h-screen 2xl:h-screen p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300">
+    <div className="flex flex-col w-full min-h-screen md:h-screen 2xl:h-screen p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300">
       <main className="w-full h-full border-2 rounded-4xl border-gray-300 dark:border-gray-300/20 p-2 bg-white dark:bg-neutral-950 transition-colors duration-300">
         <div className="grid grid-cols-8 lg:grid-cols-13 gap-4 p-2 md:p-4 h-full">
           <BentoBox
@@ -30,7 +30,7 @@ export default function Home() {
               </span>
             </div>
           </BentoBox>
-          
+
           <BentoBox
             col="col-span-full md:col-span-4 lg:col-span-3"
             className="order-3 lg:order-none h-[200px] relative group"
@@ -53,7 +53,6 @@ export default function Home() {
             />
           </BentoBox>
 
-          {/* Social Media Box with Theme Switcher */}
           <BentoBox
             col="col-span-full md:col-span-8 lg:col-span-3"
             border={false}

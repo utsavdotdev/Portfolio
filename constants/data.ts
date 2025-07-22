@@ -82,6 +82,7 @@ export const projects: Project[] = [
     subtitle: "Full-stack web application with payment integration",
     label: "React",
     image: "/placeholder.svg?height=200&width=400",
+    link: "/project/1",
   },
   {
     id: 2,
@@ -89,6 +90,7 @@ export const projects: Project[] = [
     subtitle: "Collaborative productivity tool with real-time updates",
     label: "Next.js",
     image: "/placeholder.svg?height=200&width=400",
+    link: "/project/2",
   },
   {
     id: 3,
@@ -96,5 +98,6 @@ export const projects: Project[] = [
     subtitle: "Interactive weather forecasting with data visualization",
     label: "Vue.js",
     image: "/placeholder.svg?height=200&width=400",
+    link: "/project/3",
   },
 ];

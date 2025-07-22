@@ -1,12 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const ProjectBox = ({ project }: ProjectBoxProps) => {
   return (
     <>
-      <div
+      <Link
         key={project.id}
         className="group overflow-hidden rounded-lg border border-gray-200 dark:border-neutral-800 hover:border-gray-300 dark:hover:border-neutral-700 transition-all duration-300 hover:shadow-lg dark:hover:shadow-2xl cursor-pointer bg-white dark:bg-[#141414] max-w-md font-pops"
+        href={project.link}
       >
         <div className="p-4">
           <div className="mb-4">
@@ -35,7 +37,7 @@ const ProjectBox = ({ project }: ProjectBoxProps) => {
             </p>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };
