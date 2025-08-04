@@ -20,7 +20,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "cobe": "^0.6.4",
-    "framer-motion": "^12.16.0",
+    "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
     "heroicons": "^2.2.0",
     "jest-diff": "^30.0.4",
