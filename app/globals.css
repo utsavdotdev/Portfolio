@@ -1,9 +1,13 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
+/* Centralized font variables — change `--site-font-sans` to swap site font */
+:root {
+  /* `next/font` (Poppins) sets `--font-poppins` on the <body> when applied via layout.tsx */
+  --site-font-sans: var(--font-poppins);
+  /* compatibility aliases used across the codebase / utilities */
+  --font-sans: var(--site-font-sans);
   --font-pops: var(--font-poppins);
-  --font-satoshi: var(--font-satoshi);
 }
 
 @layer base {
@@ -13,7 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-pops);
+    font-family: var(--site-font-sans);
     scroll-behavior: smooth;
   }
   button {
@@ -22,7 +26,6 @@
   h1 {
     @apply -tracking-[2px];
   }
-  
 }
 
 @layer components {
@@ -35,15 +38,19 @@
     perspective: 1000px;
   }
   @keyframes tech-slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%) }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
-  
+
   .tech-stack-slider {
     animation: tech-slide 30s linear infinite;
     width: max-content;
   }
-  
+
   .tech-stack-slider:hover {
     animation-play-state: paused;
   }

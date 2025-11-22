@@ -24,7 +24,7 @@ const Close = () => {
   return (
     <>
       <motion.div
-        className="absolute top-4 right-6 flex flex-col items-center gap-1"
+        className="absolute top-8 right-8 flex flex-col items-center gap-1"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, scale: 0.5 }}

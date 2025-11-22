@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { satoshi } from "@/fonts/font";
 import { ThemeProvider } from "next-themes";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -22,11 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${satoshi.variable} ${poppins.variable} antialiased`}>
+    <html lang="en" className={`${poppins.variable}`} suppressHydrationWarning>
+      <body className={`antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
-          <SpeedInsights/>
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>

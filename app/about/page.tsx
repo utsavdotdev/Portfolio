@@ -17,10 +17,10 @@ const page = () => {
   return (
     <>
       <PageTransition>
-        <div className="flex flex-col w-full min-h-screen 2xl:h-screen p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300 overflow-hidden">
+        <div className="flex flex-col w-full min-h-screen 2xl:h-screen p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300">
           <main className="relative w-full h-full border-2 rounded-4xl border-gray-300 dark:border-gray-300/20 p-2 bg-white dark:bg-neutral-950 transition-colors duration-300">
             <Close />
-            <div className="grid grid-cols-1 lg:grid-cols-8 lg:grid-rows-6 gap-3 sm:gap-4 px-2 md:px-12 lg:px-32 pt-24 pb-2 h-full md:pb-8 overflow-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-8 lg:grid-rows-6 gap-3 sm:gap-4 px-2 md:px-12 lg:px-32 pt-24 pb-2 h-full md:pb-8">
               <BentoBox
                 col="col-span-1 lg:col-start-1 lg:col-end-5 lg:row-start-1 lg:row-end-6"
                 className="px-7 py-5 flex flex-col gap-3"

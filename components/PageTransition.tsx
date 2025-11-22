@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 
 interface PageTransitionProps {
   children: ReactNode;
@@ -12,7 +12,7 @@ const pageVariants = {
   initial: {
     opacity: 0,
     scale: 0.96,
-    y: 100,
+    y: 50,
   },
   in: {
     opacity: 1,
@@ -33,6 +33,19 @@ const pageTransition = {
 };
 
 const PageTransition = ({ children, className = "" }: PageTransitionProps) => {
+  useEffect(() => {
+    const body = document.body;
+    const originalOverflow = body.style.overflow;
+    // Only hide scrollbar if content does not overflow
+    const needsScrollbar = body.scrollHeight > window.innerHeight;
+    if (!needsScrollbar) {
+      body.style.overflow = "hidden";
+    }
+    return () => {
+      body.style.overflow = originalOverflow;
+    };
+  }, []);
+
   return (
     <motion.div
       initial="initial"

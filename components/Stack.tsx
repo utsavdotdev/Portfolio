@@ -11,7 +11,10 @@ const Stack = () => {
 
   return (
     <>
-      <div className="flex flex-col p-6 gap-4 cursor-pointer" onClick={() => setIsOpen(true)}>
+      <div
+        className="flex flex-col p-6 gap-4 cursor-pointer"
+        onClick={() => setIsOpen(true)}
+      >
         <span className="text-2xl font-pops text-gray-800 dark:text-gray-300 mb-4 block">
           Stack I Use
         </span>
@@ -35,7 +38,7 @@ const Stack = () => {
                     height={16}
                   />
                 </div>
-                <span className="text-sm font-satoshi text-gray-800 dark:text-gray-300">
+                <span className="text-sm font-sans text-gray-800 dark:text-gray-300">
                   {tech.name}
                 </span>
               </div>
@@ -59,7 +62,7 @@ const Stack = () => {
                     height={16}
                   />
                 </div>
-                <span className="text-sm font-satoshi text-gray-800 dark:text-gray-300">
+                <span className="text-sm font-sans text-gray-800 dark:text-gray-300">
                   {tech.name}
                 </span>
               </div>
