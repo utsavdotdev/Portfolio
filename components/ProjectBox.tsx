@@ -8,25 +8,18 @@ const ProjectBox = ({ project }: ProjectBoxProps) => {
       <Link
         key={project.id}
         href={project.link}
-        className={
-          "group block rounded-3xl overflow-hidden bg-gradient-to-br " +
-          "from-white to-neutral-50 dark:from-neutral-900 dark:to-neutral-800 " +
-          "border border-neutral-200 dark:border-neutral-700 " +
-          "hover:shadow-2xl transition-shadow duration-300"
-        }
+        className={"box group block rounded-3xl overflow-hidden"}
       >
         <div className="p-6">
-          <div className="mb-5 rounded-2xl bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 p-6 flex items-center justify-center">
-            <div className="w-full rounded-xl overflow-hidden shadow-inner">
+            <div className="w-full rounded-xl overflow-hidden shadow-inner mb-5">
               <Image
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
                 width={1200}
                 height={700}
-                className="w-full h-56 sm:h-48 md:h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-56 sm:h-48 md:h-86 object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-          </div>
 
           <div className="flex items-start justify-between gap-4">
             <div className="flex-1 min-w-0">
@@ -38,7 +31,7 @@ const ProjectBox = ({ project }: ProjectBoxProps) => {
               </p>
             </div>
 
-            <span className="ml-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-neutral-100 text-neutral-800 border border-neutral-200 dark:bg-neutral-700 dark:text-neutral-100 dark:border-neutral-700">
+            <span className="ml-4 inline-flex items-center px-4 py-2 md:py-2 rounded-full text-sm md:text-xm font-small bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-400">
               {project.label}
             </span>
           </div>

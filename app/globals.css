@@ -1,15 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Centralized font variables — change `--site-font-sans` to swap site font */
-:root {
-  /* `next/font` (Poppins) sets `--font-poppins` on the <body> when applied via layout.tsx */
-  --site-font-sans: var(--font-poppins);
-  /* compatibility aliases used across the codebase / utilities */
-  --font-sans: var(--site-font-sans);
-  --font-pops: var(--font-poppins);
-}
-
 @layer base {
   *,
   html,
@@ -17,25 +8,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--site-font-sans);
+    font-family: var(--font-poppins);
     scroll-behavior: smooth;
   }
   button {
     @apply cursor-pointer;
-  }
-  h1 {
-    @apply -tracking-[2px];
   }
 }
 
 @layer components {
   .box {
     @apply border border-gray-300 dark:border-gray-400/10 bg-white dark:bg-[#141414];
-  }
-  .cursor-trail {
-    will-change: transform;
-    backface-visibility: hidden;
-    perspective: 1000px;
   }
   @keyframes tech-slide {
     0% {
