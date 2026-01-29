@@ -11,7 +11,7 @@ const page = async ({ params }: ParamsWithSearch) => {
   ];
 
   return (
-    <div className="flex flex-col w-full min-h-screen md:h-screen 2xl:h-screen p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300">
+    <div className="flex flex-col w-full min-h-screen md:h-screen 2xl:h-[calc(100vh-5rem)] p-2 lg:p-4 bg-white dark:bg-neutral-950 transition-colors duration-300">
       <main className="relative w-full border-2 rounded-4xl border-gray-300 dark:border-gray-300/20 p-2 bg-white dark:bg-neutral-950 transition-colors duration-300 pb-16">
         <Close />
         <div className="flex flex-col w-full mt-32 px-4 lg:px-16">
